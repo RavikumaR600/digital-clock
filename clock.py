@@ -20,4 +20,22 @@ digi.grid(row=0,column=2)
 nota=Label(root,text="Hours   Minutes   Seconds   ",font="times 15 bold")
 nota.grid(row=3,column=2)
 
+root = Tk()
+
+root.title('Digital Clock using Tkinter GUI')
+
+def clock():
+	tick = strftime('%H:%M:%S %p')
+
+	label.config(text =tick)
+
+	label.after(1000, clock)
+
+label = Label(root, font =('sans', 90), background = 'black', foreground = 'yellow')
+
+label.pack(anchor= 'center')
+
+clock()
+mainloop()
+
 root.mainloop()
